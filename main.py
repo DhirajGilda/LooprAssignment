@@ -5,6 +5,8 @@ from pydantic import BaseModel
 from datetime import datetime, timedelta
 import jwt
 import json
+from typing import List
+import uvicorn
 
 app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -20,6 +22,14 @@ def load_users():
 def load_products():
   with open("data/products.json", "r") as file:
     return json.load(file)
+
+
+def load_cart(username):
+  try:
+    with open(f"data/cart_{username}.json", "r") as file:
+      return json.load(file)
+  except FileNotFoundError:
+    return {"products": []}
 
 
 # Save user data to JSON file

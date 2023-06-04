@@ -1,0 +1,10 @@
+{
+  "john123": {
+    "username": "john123",
+    "password": "$2b$12$yueFYasP6uww6AKZjI39f.CgKvT6/nYbAAvIuOq.MZsZo2D.z/qg6"
+  },
+  "jane456": {
+    "username": "jane456",
+    "password": "$2b$12$N3hluZ7DXkR8EoT7vz1BWuhLg9QU2ZDh/1j/tvMdTBYYCBvoiU0nm"
+  }
+}
